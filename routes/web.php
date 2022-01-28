@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('hello','HelloController@index');
+// Route::get('test','HelloController@test');
+
+
+Route::get('introduction', 'IntroductionController@top');
+Route::get('self-introduction', 'IntroductionController@selfIntroduction');
+Route::get('inquiry-introduction', 'IntroductionController@inquiryIntroduction');
+
