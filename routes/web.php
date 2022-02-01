@@ -31,3 +31,7 @@ Route::post('form/result','Homework1_1Controller@result');
 // 合計値
 Route::get('sum','Homework1_2Controller@sum');
 Route::post('sum/result','Homework1_2Controller@result');
+
+// ID
+Route::get('id','Homework1_3Controller@id');
+Route::post('id/result','Homework1_3Controller@result');
