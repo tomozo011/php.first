@@ -7,12 +7,16 @@ use Illuminate\Http\Request;
 class IntroductionController extends Controller
 {
     public function top(){
-        return view('introduction-top');
+        return view('introduction\introduction-top');
     }
     public function selfIntroduction(){
-        return view('self-introducton');
+        return view('introduction\self-introducton');
     }
     public function inquiryIntroduction(){
-        return view('inquiry-introduction');
+        return view('introduction\inquiry-introduction');
+    }
+    public function store(Request $request){
+        dump($request->name);
+        dd($request);
     }
 }

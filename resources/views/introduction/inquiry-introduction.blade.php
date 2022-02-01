@@ -26,7 +26,8 @@
 
 <div class="wrap">
     <div class="inquiry">
-        <form name="form">
+        <form name="form" action="inquiry" method="post">
+        @csrf
             <label id="label">名前</label>
             <input type="text" name="name" placeholder="入力してください" id="border"></input><br>
             <label id="label">性別</label>
@@ -35,10 +36,10 @@
             <textarea name="content" cols="50" rows="10" placeholder="入力してください" id="border"></textarea><br>
             <label>添付ファイル</label>
             <input type="file" name="file"></input>
-            
+            <button type="submit" id="btn">送信</button>
         </form>
     </div>    
-    <button id="btn">送信</button>
+    
 </div>
 
 <script>
