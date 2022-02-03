@@ -35,3 +35,7 @@ Route::post('sum/result','Homework1_2Controller@result');
 // ID
 Route::get('id','Homework1_3Controller@id');
 Route::post('id/result','Homework1_3Controller@result');
+
+// タクシー
+Route::get('taxi_form','TaxiController@taxi_form');
+Route::post('id/result','Homework1_3Controller@result');

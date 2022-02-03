@@ -20,3 +20,4 @@ class Homework1_3Controller extends Controller
         return view('homework1-3.result1-3');
     }
 }
+
