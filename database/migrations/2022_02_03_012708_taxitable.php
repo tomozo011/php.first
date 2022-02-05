@@ -33,6 +33,6 @@ class Taxitable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('taxi');
     }
 }
