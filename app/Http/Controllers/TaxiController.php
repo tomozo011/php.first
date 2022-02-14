@@ -63,10 +63,9 @@ class TaxiController extends Controller
             
         // !---------------------------------------------------
 
-        echo "タクシーA 普通" . " " . $normal_price . "<br>";
-        echo "タクシーB 大型" . " " . $big_price;
+        $answers = [$normal_price, $big_price];
 
         // !-----------------------------------------------------
-        return view('taxi.result');
+        return view('taxi.result', compact('answers'));
     }
 }
