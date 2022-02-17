@@ -14,10 +14,11 @@ class CreateTables1Table extends Migration
     public function up()
     {
         Schema::create('tables1', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('biz_id')->unique();
-            $table->char('ticket_code',5)->unique();
-            $table->integer('spot_area_id')->foreign();
+            $table->increments('id');
+            $table->integer('biz_id');
+            $table->char('ticket_code', 5);
+            $table->unique('biz_id', 'ticket_code');
+            $table->integer('spot_area_id');
             $table->char('genre_code1', 10);
             $table->char('genre_code2', 20);
             $table->String('ticket_name', 30);
@@ -26,8 +27,6 @@ class CreateTables1Table extends Migration
             $table->integer('minors_flag');
             $table->integer('cansel_flag');
             $table->integer('cansel_limit');
-            $table->datetime('created_at')->nullable();
-            $table->datetime('updated_at')->nullable();
             $table->timestamps();
         });
     }
