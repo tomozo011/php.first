@@ -23,8 +23,26 @@ $names = array_column($items, 'name');
 // !----------------------------------------------------------
 
 // 売上
-foreach($items as $item=>$value){
-    $sales = $value['price'] * $value['sales'];
+// $i=0;
+// foreach($items as $item=>$value){
+//     if($i===0){
+//         $sales = array($value['price'] * $value['sales']); 
+//         $sales_names = array($value['name']);
+//     }else{
+//         array_push($sales, $value['price'] * $value['sales']);
+//         array_push($sales_names, $value['name']);
+//     }
+//     $i++;
+// }
+// array_multisort($sales, $sales_names);
+// var_dump($sales); echo '<br>';
+// var_dump($sales_names);
+
+// 在庫少ない
+foreach($items as $item => $value){
+    if(strpos($value['name'], 'pen') === false){
+    }else{
+        var_dump($value['name']);
+    }
 }
-var_dump($sales);
 ?>

@@ -18,18 +18,13 @@ class CreateTables2Table extends Migration
             $table->integer('biz_id');
             $table->char('ticket_code', 5);
             $table->integer('sales_id');
-            $table->unique('biz_id', 'ticket_code','sales_id');
             $table->datetime('sales_interval_start');
             $table->datetime('sales_interval_end');
             $table->timestamps();
 
-            $table->foreign('biz_id')
-                  ->references('id')->on('table1')
-                  ->onDelete('cascade');
-            $table->foreign('ticket_code')
-                  ->references('id')->on('table1')
-                  ->onDelete('cascade');
-            
+            $table->unique(['biz_id', 'ticket_code','sales_id']);
+            $table->foreign(['biz_id', 'ticket_code'])
+                  ->references(['biz_id', 'ticket_code'])->on('tables1');
         });
     }
 
