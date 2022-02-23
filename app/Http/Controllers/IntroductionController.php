@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\introdction;
+
 class IntroductionController extends Controller
 {
     public function top(){
@@ -16,7 +18,11 @@ class IntroductionController extends Controller
         return view('introduction\inquiry-introduction');
     }
     public function store(Request $request){
-        dump($request->name);
-        dd($request);
+        $introduction = new introdction;
+        $introduction->name = $request->name;
+        $introduction->sex = $request->sex;
+        $introduction->content = $request->content;
+        $introduction->file = $request->file;
+        $introduction->save();
     }
 }

@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 // Route::get('hello','HelloController@index');
-Route::get('test','HelloController@test');
+Route::get('sample','HelloController@sample');
+Route::post('sample/result','HelloController@sample_result');
 
 // 自己紹介
 Route::get('introduction', 'IntroductionController@top');
@@ -39,3 +40,6 @@ Route::post('id/result','Homework1_3Controller@result');
 // タクシー
 Route::get('taxi','TaxiController@taxi');
 Route::post('taxi/result','TaxiController@taxi_result');
+
+Route::get('entry','EntryController@entry');
+Route::post('entry/result','EntryController@store');
