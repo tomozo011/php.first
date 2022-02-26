@@ -10,9 +10,6 @@ class EntryController extends Controller
     public function entry(){
         return view('entry.entry');
     }
-    // public function entry_result(){
-    //     return view('entry.entry_result');
-    // }
 
     public function store(Request $request){
         $entry = new User1;
@@ -23,7 +20,13 @@ class EntryController extends Controller
 
         $results = [$entry->name, $entry->address, $entry->age];
         return view('entry.entry_result', compact('results'));
-        
-// compact('result')
+    }
+
+    public function getid(){
+        return view('entry.getid');
+    }
+    public function getid_result(Request $request){
+        $getids = User1::where('id', $_POST['id'])->first();
+        return view('entry.getid_result')->with(['getids' => $getids]);
     }
 }

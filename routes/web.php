@@ -41,5 +41,9 @@ Route::post('id/result','Homework1_3Controller@result');
 Route::get('taxi','TaxiController@taxi');
 Route::post('taxi/result','TaxiController@taxi_result');
 
+// 登録
 Route::get('entry','EntryController@entry');
 Route::post('entry/result','EntryController@store');
+
+Route::get('getid','EntryController@getid');
+Route::post('getid/result','EntryController@getid_result');
