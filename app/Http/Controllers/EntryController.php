@@ -26,7 +26,30 @@ class EntryController extends Controller
         return view('entry.getid');
     }
     public function getid_result(Request $request){
-        $getids = User1::where('id', $_POST['id'])->first();
-        return view('entry.getid_result')->with(['getids' => $getids]);
+        $getnames = User1::where('name', $_POST['name'])->get();
+        // dd($getnames);
+        return view('entry.getid_result')->with(['getnames' => $getnames]);
     }
+
+    public function delete(){
+        return view('entry.deleteId');
+    }
+    public function deleteId(Request $request){
+        $getId = User1::where('id', $_POST['id'])->first();
+        $getId->delete();
+        return view('entry.deleteId');
+    }
+
+    public function edit(){
+        return view('entry.edit');
+    }
+
+    public function update(Request $request){
+        $update = User1::where('id', $_POST['id'])->get();
+        $update->name = $request->name;
+        $update->address = $request->address;
+        $update->age = $request->age;
+        $update->save();
+    }
+        
 }

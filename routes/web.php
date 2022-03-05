@@ -47,3 +47,22 @@ Route::post('entry/result','EntryController@store');
 
 Route::get('getid','EntryController@getid');
 Route::post('getid/result','EntryController@getid_result');
+Route::get('getid/edit','EntryController@edit');
+
+Route::get('delete', 'EntryController@delete');
+Route::post('delete/id','EntryController@deleteId');
+
+// ゲーム
+Route::get('quiz','GameController@quiz');
+Route::post('quiz/answer','GameController@answer');
+
+// アイテム
+Route::get('items','ItemController@create');
+Route::post('items/entry','ItemController@store');
+Route::get('items/edit','ItemController@edit');
+// Route::post('items/entry','ItemController@update');
+Route::get('items/delete','ItemController@dele');
+Route::post('items/list','ItemController@destory');
+
+Route::get('items/getid','ItemController@getid');
+Route::post('items/getid_result','ItemController@getid_result');
