@@ -22,7 +22,7 @@ class ItemController extends Controller
 
         $getItems = Item::where('item', $_POST['item'])->get();
 
-        $url = url()->previous();
+        $url = 'http://127.0.0.1:8080/items';
         $lists = ['id', 'アイテム名', 'カテゴリー', '価格'];
         return view('items.store', compact('url', 'lists'))->with(['getItems' => $getItems]);
     }
@@ -32,11 +32,17 @@ class ItemController extends Controller
     }
 
     public function update(Request $request){
-        $getItem = Item::where('id', $_POST['id'])->get();
-        $getItem->item = $_POST['item'];
-        $getItem->category = $_POST['category'];
-        $getItem->price = $_POST['price'];
-        $getItem->update();
+        $items = Item::where('id', $_POST['id'])->get();
+        foreach($items as $item){
+            $item->item = $_POST['item'];
+            $item->category = $_POST['category'];
+            $item->price = $_POST['price'];
+            $item->save(); 
+        }
+        
+        $url = 'http://127.0.0.1:8080/items';
+        $getItem = Item::where('id', $_POST['id'])->first();
+        return view('items.edited', compact('url', 'getItem'));
     }
 // 削除
     public function dele(){
@@ -44,11 +50,16 @@ class ItemController extends Controller
     }
 
     public function destory(Request $request){
-        $getItems = Item::get();
-        $destory = Item::where('id', $_POST['id'])->first();
-        $destory->delete();
         
-        $url = url()->previous();
-        return view('items.list', compact('url'))->with(['getItems' => $getItems]);
+        
+        if(!empty($_POST['id'])){
+            $getItems = Item::get();
+            $destory = Item::where('id', $_POST['id'])->first();
+            $destory->delete();
+        }
+
+        $lists = ['id', 'アイテム名', 'カテゴリー', '価格'];
+        $url = 'http://127.0.0.1:8080/items';
+        return view('items.store', compact('lists', 'url'))->with(['getItems' => $getItems]);
     }
 }

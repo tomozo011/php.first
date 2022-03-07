@@ -16,7 +16,7 @@
     </form>
     <form action="delete" method="get">
         @csrf
-        <button type="submit" id="btn">削除</button>
+        <button type="submit" name="btn">削除</button>
     </form>
     <ul>
         <li>@foreach($lists as $list) {{$list}} @endforeach</li>
@@ -25,11 +25,4 @@
     @foreach($getItems as $getItem) {{$getItem->item}} @endforeach <br>
     @foreach($getItems as $getItem) {{$getItem->category}} @endforeach <br>
     @foreach($getItems as $getItem) {{$getItem->price}} @endforeach
-
-    <script>
-        const btn = document.getElementId('btn');
-        btn.addEventListener('cilick', () => {
-            console.log("クリックされました");
-        });
-    </script>
 </body>

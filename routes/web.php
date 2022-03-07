@@ -60,9 +60,7 @@ Route::post('quiz/answer','GameController@answer');
 Route::get('items','ItemController@create');
 Route::post('items/entry','ItemController@store');
 Route::get('items/edit','ItemController@edit');
-// Route::post('items/entry','ItemController@update');
+Route::post('items/edited','ItemController@update');
 Route::get('items/delete','ItemController@dele');
 Route::post('items/list','ItemController@destory');
 
-Route::get('items/getid','ItemController@getid');
-Route::post('items/getid_result','ItemController@getid_result');
