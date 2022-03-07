@@ -8,6 +8,7 @@
     <form action="delete" method="get">
         <button type="submit">削除</button>
     </form>
+    <p>@foreach($lists as $list) {{$list}} @endforeach</p>
     {{$getItem->id}}
     {{$getItem->item}}
     {{$getItem->category}}

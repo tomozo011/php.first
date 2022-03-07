@@ -18,11 +18,11 @@
         @csrf
         <button type="submit" name="btn">削除</button>
     </form>
-    <ul>
-        <li>@foreach($lists as $list) {{$list}} @endforeach</li>
-    </ul>
-    @foreach($getItems as $getItem) {{$getItem->id}} @endforeach <br>
-    @foreach($getItems as $getItem) {{$getItem->item}} @endforeach <br>
-    @foreach($getItems as $getItem) {{$getItem->category}} @endforeach <br>
-    @foreach($getItems as $getItem) {{$getItem->price}} @endforeach
+    
+    <p>@foreach($lists as $list) {{$list}} @endforeach</p>
+    {{$getItem->id}}
+    {{$getItem->item}}
+    {{$getItem->category}}
+    {{$getItem->price}}
+
 </body>

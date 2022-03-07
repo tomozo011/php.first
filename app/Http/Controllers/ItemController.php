@@ -21,10 +21,11 @@ class ItemController extends Controller
         $item->save();
 
         $getItems = Item::where('item', $_POST['item'])->get();
+        $getItem = Item::where('item', $_POST['item'])->first();
 
         $url = 'http://127.0.0.1:8080/items';
         $lists = ['id', 'アイテム名', 'カテゴリー', '価格'];
-        return view('items.store', compact('url', 'lists'))->with(['getItems' => $getItems]);
+        return view('items.store', compact('url', 'lists'))->with(['getItem' => $getItem]);
     }
 // 更新
     public function edit(){
@@ -60,6 +61,7 @@ class ItemController extends Controller
 
         $lists = ['id', 'アイテム名', 'カテゴリー', '価格'];
         $url = 'http://127.0.0.1:8080/items';
-        return view('items.store', compact('lists', 'url'))->with(['getItems' => $getItems]);
+        $getItem = Item::where('id', $_POST['id'])->first();
+        return view('items.destroy', compact('lists', 'url'))->with(['getItem' => $getItem]);
     }
 }
