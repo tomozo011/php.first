@@ -51,13 +51,9 @@ class ItemController extends Controller
     }
 
     public function destory(Request $request){
-        
-        
-        if(!empty($_POST['id'])){
-            $getItems = Item::get();
-            $destory = Item::where('id', $_POST['id'])->first();
-            $destory->delete();
-        }
+        $getItems = Item::get();
+        $destory = Item::where('id', $_POST['id'])->first();
+        $destory->delete();
 
         $lists = ['id', 'アイテム名', 'カテゴリー', '価格'];
         $url = 'http://127.0.0.1:8080/items';
