@@ -57,10 +57,13 @@ Route::get('quiz','GameController@quiz');
 Route::post('quiz/answer','GameController@answer');
 
 // アイテム
+Route::post('index','ItemController@index');
 Route::get('items','ItemController@create');
 Route::post('items/entry','ItemController@store');
-Route::get('items/edit','ItemController@edit');
+
+Route::get('items/edit/{id}', 'ItemController@edit');
 Route::post('items/edited','ItemController@update');
-Route::get('items/delete','ItemController@dele');
-Route::post('items/list','ItemController@destory');
+
+Route::get('items/destory/{id}','ItemController@destory');
+
 

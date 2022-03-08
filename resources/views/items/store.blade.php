@@ -8,21 +8,41 @@
 </style>
 </head>
 <body>
-    <form action="{{$url}}" method="get">
+    <form action="/items" method="get">
         <button type="submit">新規登録</button>
     </form>
-    <form action="edit" method="get">
-        <button type="submit">編集</button>
-    </form>
-    <form action="delete" method="get">
-        @csrf
-        <button type="submit" name="btn">削除</button>
-    </form>
     
-    <p>@foreach($lists as $list) {{$list}} @endforeach</p>
-    {{$getItem->id}}
-    {{$getItem->item}}
-    {{$getItem->category}}
-    {{$getItem->price}}
+    <table border="1">
+    <tr>
+      <th>id</th>
+      <th>アイテム名</th>
+      <th>カテゴリー</th>
+      <th>価格</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+        @foreach($getItems as $item)
+    <tr>
+        <td> {{$item->id}} </td>
+        <td> {{$item->item}} </td>
+        <td> {{$item->category}} </td>
+        <td> {{$item->price}} </td>
+        <td><a href = "{{url('/items/edit/'.$item->id)}}">編集</a> </td>
+        <td><a href = "{{ url('items/destory/'. $item->id) }}" >削除</a></td>
+    <tr>
+        @endforeach
+    </tr>
+  </table>
 
+  <script>
+        function alert{
+            var reslut = window.confirm('削除を行ってもいいですか？');
+            if(result){
+                console.log(result);
+            }else{
+
+            }
+        }
+    </script>
 </body>
