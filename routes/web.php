@@ -57,7 +57,7 @@ Route::get('quiz','GameController@quiz');
 Route::post('quiz/answer','GameController@answer');
 
 // アイテム
-Route::post('index','ItemController@index');
+Route::get('index','ItemController@index');
 Route::get('items','ItemController@create');
 Route::post('items/entry','ItemController@store');
 
