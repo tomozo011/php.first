@@ -8,7 +8,7 @@
 </style>
 </head>
 <boby>
-    <form action="index" method="post">
+    <form action="/items/entry" method="post">
         @csrf
         アイテム名<input type="text" name="item"><br>
         カテゴリー<input type="text" name="category"><br>

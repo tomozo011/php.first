@@ -6,22 +6,11 @@
 <form action="list" method="post">
     @csrf
     ID:<input type="text" name="id"></input>
-    <button name="myForm" type="submit" onclick="alert()">確認</button>
+    <button name="myForm" value="削除を行ってもいいですか？" onclick="alert()">確認</button>
 
     <script>
         function alert{
-            var reslut = window.confirm('削除を行ってもいいですか？');
-            if(result){
-                console.log(result);
-            }else{
-
-            }
+            window.confirm('削除を行ってもいいですか？');
         }
     </script>
-
-        <!-- <form action="{{ route('items/destory/'. $item->id) }}" id="form_{{$item->id}}" method="delete"> -->
-        @csrf
-                @method('delete')
-
-                <a href = "{{ url('items/destory/'. $item->id) }}" >削除</a>
 </form>

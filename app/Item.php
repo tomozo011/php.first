@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Item extends Model
 {
-    // protected $table = 'Items';
+    protected $table = 'Items';
     use SoftDeletes;
 }

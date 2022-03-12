@@ -29,19 +29,19 @@
         <td> {{$item->category}} </td>
         <td> {{$item->price}} </td>
         <td><a href = "{{url('/items/edit/'.$item->id)}}">編集</a> </td>
-        <td><a href = "{{ url('items/destory/'. $item->id) }}" >削除</a></td>
+        <td><a href = "{{ url('items/destory/'. $item->id) }}" onClick="return alert()">削除</a></td>
     <tr>
         @endforeach
     </tr>
   </table>
 
-  <script>
-        function alert{
-            var reslut = window.confirm('削除を行ってもいいですか？');
-            if(result){
-                console.log(result);
+   <script>
+        function alert(){
+            var check = confirm('削除を行ってもいいですか？');
+            if(check == true){
+                return true;
             }else{
-
+                return false;
             }
         }
     </script>

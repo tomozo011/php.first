@@ -7,18 +7,16 @@ use App\Item;
 
 class ItemController extends Controller
 {
-    
-    public function index(){
-        $getItems = Item::get();
-
-        return view('items.store')->with(['getItems' => $getItems]);
-    }
 
     public function create(){
         return view('items.items');
     }
 
-    
+    public function index(){
+        $getItems = Item::get();
+        return view('items.store')->with(['getItems' => $getItems]);
+    }
+
 // 登録
     public function store(Request $request){
         $item = new Item;
@@ -51,10 +49,6 @@ class ItemController extends Controller
         $destory->delete();
 
         return redirect('index');
-        // $lists = ['id', 'アイテム名', 'カテゴリー', '価格'];
-        // $url = 'http://127.0.0.1:8080/items';
-        // $getItem = Item::where('id', $_POST['id'])->first();
-        // return view('items.destroy', compact('lists', 'url'))->with(['getItem' => $getItem]);
     }
 }
 
