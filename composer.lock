@@ -6603,7 +6603,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2.5|^8.0"
+        "php":"^7.2.5|8.0.6"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
