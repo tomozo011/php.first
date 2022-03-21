@@ -19,7 +19,7 @@ class CreateTables4Table extends Migration
             $table->char('ticket_code');
             $table->integer('cautions_type');
             $table->integer('cautions_index');
-            $table->text('cautions_text', 1000)->nullable();
+            $table->text('cautions_text', 191)->nullable();
             $table->timestamps();
 
             $table->unique(['biz_id', 'ticket_code', 'cautions_type', 'cautions_index']);

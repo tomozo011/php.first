@@ -21,7 +21,7 @@ class CreateTables1Table extends Migration
             $table->char('genre_code1', 10);
             $table->char('genre_code2', 20);
             $table->String('ticket_name', 30);
-            $table->text('ticket_remarks', 200)->nullable();
+            $table->text('ticket_remarks', 191)->nullable();
             $table->integer('tickets_kind');
             $table->integer('minors_flag');
             $table->integer('cansel_flag');

@@ -19,7 +19,7 @@ class CreateTables3Table extends Migration
             $table->char('ticket_code');
             $table->integer('contents_type');
             $table->integer('contents_index');
-            $table->string('contents_data',1000)->nullable();
+            $table->string('contents_data',191)->nullable();
             $table->timestamps();
 
             $table->unique(['biz_id', 'ticket_code', 'contents_type', 'contents_index']);
