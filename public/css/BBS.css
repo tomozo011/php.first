@@ -1,0 +1,142 @@
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+
+#main {
+    margin: 2rem 20rem;
+}
+
+#main h1 {
+    font-size: 3rem;
+    color: #0099FF;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+    text-decoration-color: #33FF00;
+}
+
+.view {
+    margin: 0.5rem 3rem;
+    font-size: 1.5rem;
+}
+
+.view span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.view a {
+    float: right;
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #005FFF;
+}
+
+#comment {
+    color: #E9967A;
+}
+
+#delete {
+    color: #FF0000;
+}
+
+
+.line {
+    border-bottom: 0.1rem solid #000;
+    margin-bottom: 5rem;
+}
+
+.form h1 {
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: -1rem;
+    color: #0099FF;
+}
+
+.form {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin: 2rem 25rem;
+}
+
+.form textarea {
+    width: 50rem;
+    height: 7em;
+    line-height: 1.5em
+}
+.form button {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-sizing: border-box;
+    background: #6fa1ff;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.form button:hover{
+    background-color: #0099FF;
+}
+
+#show.hideen{
+    display: none;
+}
+
+#show.open {
+    position: fixed;
+    background-color: #FFF;
+    margin-left: 10rem;
+    z-index: 999;
+    top: 0;
+}
+
+.shadow {
+    background-color: #BBBBBB	;
+    opacity: 0.5;
+}
+
+#close {
+    padding: 1.5rem;
+    margin: 2rem 5rem;
+    box-sizing: border-box;
+    background: #FFABCE;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+#close:hover {
+    background-color: #FF69A3;
+}
+
+.origin {
+    margin: 5rem 30rem;
+    font-size: 1.5rem;
+}
+
+.origin span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.comment {
+    margin: 5rem 30rem;
+    font-size: 1.5rem;
+}
+
+.comment span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#topic {
+    font-size: 2.5rem;
+    color: #0099FF;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+    text-decoration-color: #33FF00;
+    margin: 2rem 20rem;
+}
+
+.comment a {
+    float: right;
+    margin-left: 0.5rem;
+}
