@@ -19,6 +19,12 @@ class ItemController extends Controller
 
 // 登録
     public function store(Request $request){
+        $request->validate([
+            'item' => 'required',
+            'category' => 'required',
+            'price' => 'required',
+        ]);
+
         $item = new Item;
         $item->id = $request->id;
         $item->item = $request->item;

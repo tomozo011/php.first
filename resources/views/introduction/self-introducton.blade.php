@@ -9,6 +9,7 @@
 <header>
     <div class="top">
         <h2>自己紹介</h2>
+        <h2>自己紹介</h2>
     </div>
     <div class="nav">
         <ul>

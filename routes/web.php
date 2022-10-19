@@ -67,3 +67,6 @@ Route::post('items/edited','ItemController@update');
 Route::get('items/destory/{id}','ItemController@destory');
 
 
+Route::get('jq','Jqtest_Controller@test');
+
+
