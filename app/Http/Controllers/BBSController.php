@@ -40,20 +40,7 @@ class BBSController extends Controller
         }else {
             $count = 0;
         }
-            
-        // $a = count($results);
-        
-        // for($i=1; $a > $i; $i++){
-        //     // dd($results);
-        //     if($results[0]->id == $count){
-        //         // dd($results);
-        //         // dd($count[$i]);
-        //     }
-        // }
-            
-            
-    
-                        
+                           
         return view('BBS.top', compact('results', 'count'));
     }
 

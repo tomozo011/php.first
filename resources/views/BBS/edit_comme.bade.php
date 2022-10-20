@@ -2,7 +2,7 @@
 
 @section('content')
     
-    <form action="/edit" method="get">
+    <form action="/edit_comme" method="get">
         <div class="form">    
             @csrf
                 <h1>編集</h1>
