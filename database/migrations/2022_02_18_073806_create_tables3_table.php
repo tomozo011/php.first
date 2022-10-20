@@ -22,9 +22,9 @@ class CreateTables3Table extends Migration
             $table->string('contents_data',191)->nullable();
             $table->timestamps();
 
-            $table->unique(['biz_id', 'ticket_code', 'contents_type', 'contents_index']);
-            $table->foreign(['biz_id', 'ticket_code'])
-                  ->references(['biz_id', 'ticket_code'])->on('tables1');
+            // $table->unique(['biz_id', 'ticket_code', 'contents_type', 'contents_index']);
+            // $table->foreign(['biz_id', 'ticket_code'])
+            //       ->references(['biz_id', 'ticket_code'])->on('tables1');
         });
     }
 
