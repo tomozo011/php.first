@@ -60,6 +60,14 @@ class TaxiController extends Controller
             if($_POST['time'] == true){
                 $big_price = $big_price + $big_wait;
             }
+            // if($_POST['km'] <= 1500){
+            //     $big_price = $big_first;
+            // }elseif($_POST['km'] > 1500){
+            //     $big_price = $big_first + $big_over;
+            // }
+            // if($_POST['time'] == true){
+            //     $big_price = $big_price + $big_wait;
+            // }
             
         // !---------------------------------------------------
 
