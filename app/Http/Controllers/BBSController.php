@@ -95,6 +95,7 @@ class BBSController extends Controller
         $destory = Write::where('id', $id)->first();
         $destory->delete();
 
+        
         // get
         $gets = [];
         $gets[] = Write::get();
